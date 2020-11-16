@@ -12,6 +12,8 @@ namespace HandBrakeWPF.Services
     using System;
     using System.Diagnostics;
     using System.IO;
+    using System.Runtime.InteropServices;
+    using System.Text;
     using System.Windows.Forms;
     using System.Windows.Media;
 
@@ -33,6 +35,9 @@ namespace HandBrakeWPF.Services
     /// </summary>
     public class PrePostActionService : IPrePostActionService
     {
+        [DllImport("winmm.dll", EntryPoint = "mciSendStringA", CharSet = CharSet.Ansi)]
+        protected static extern int mciSendString(string lpstrCommand, StringBuilder lpstrReturnString, int uReturnLength, IntPtr hwndCallback);
+
         private readonly ILog log;
         private readonly IUserSettingService userSettingService;
         private readonly IWindowManager windowManager;
@@ -171,6 +176,9 @@ namespace HandBrakeWPF.Services
                         break;
                     case WhenDone.QuickHandBrake:
                         Execute.OnUIThread(() => System.Windows.Application.Current.Shutdown());
+                        break;
+                    case WhenDone.EjectDisc:
+                        mciSendString("set cdaudio door open", null, 0, IntPtr.Zero);
                         break;
                 }
             }

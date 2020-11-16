@@ -6653,7 +6653,18 @@ namespace HandBrakeWPF.Properties {
                 return ResourceManager.GetString("WhenDone_Suspend", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to Eject Disc.
+        /// </summary>
+        public static string WhenDone_EjectDisc
+        {
+            get
+            {
+                return ResourceManager.GetString("WhenDone_EjectDisc", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to {0} - ({1}%, Pass {2} of {3}).
         /// </summary>

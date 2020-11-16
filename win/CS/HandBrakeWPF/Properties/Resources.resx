@@ -1412,6 +1412,9 @@ VLC and MPC-HC are supported. Other players may also work but are not validated.
   <data name="WhenDone_DoNothing" xml:space="preserve">
     <value>Do nothing</value>
   </data>
+  <data name="WhenDone_Eject Disc" xml:space="preserve">
+    <value>Eject Disc</value>
+  </data>
   <data name="QueueView_Duration" xml:space="preserve">
     <value>Encode Time:</value>
   </data>

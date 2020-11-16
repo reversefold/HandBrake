@@ -110,6 +110,7 @@ static options_map_t d_when_complete_opts[] =
     {N_("Quit Handbrake"),        "quit",     4},
     {N_("Put Computer To Sleep"), "sleep",    2},
     {N_("Shutdown Computer"),     "shutdown", 3},
+    {N_("Eject Disc"),            "eject", 5},
 };
 combo_opts_t when_complete_opts =
 {

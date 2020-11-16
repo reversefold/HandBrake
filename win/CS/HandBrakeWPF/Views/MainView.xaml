@@ -656,6 +656,9 @@
                         <MenuItem x:Name="quit"
                                   cal:Message.Attach="[Event Click] = [Action WhenDone(6)]"
                                   Header="{x:Static Properties:Resources.WhenDone_QuitHandBrake}" />
+                        <MenuItem x:Name="eject"
+                                  cal:Message.Attach="[Event Click] = [Action WhenDone(7)]"
+                                  Header="{x:Static Properties:Resources.WhenDone_EjectDisc}" />
                     </MenuItem>
                 </Menu>
             </StatusBarItem>

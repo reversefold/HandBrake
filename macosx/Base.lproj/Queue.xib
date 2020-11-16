@@ -96,6 +96,7 @@
                                         <menuItem title="Alert and Notification" tag="3" id="aat-1N-Odn"/>
                                         <menuItem title="Put Computer to Sleep" tag="4" id="GUQ-xb-HVS"/>
                                         <menuItem title="Shut Down Computer" tag="5" id="QmP-SQ-XKK"/>
+                                        <menuItem title="Eject Disc" tag="6" id="6"/>
                                     </items>
                                 </menu>
                             </popUpButtonCell>
